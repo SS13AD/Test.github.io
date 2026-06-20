@@ -2,6 +2,11 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 let button = document.querySelector('#ABC');
 button.onclick=()=>{
-    tg.MainButton.setText('Button')
+    if (tg.MainButton.isVisible){
+        tg.MainButton.hide()
+    }
+    else {
+    tg.MainButton.text='Button'
     tg.MainButton.show()
+    }
 }
